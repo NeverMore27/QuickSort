@@ -3,7 +3,7 @@
 #include <iterator>
 
 template <class Iterator>
-void quickSort(Iterator begin, Iterator end)
+void quickSort(Iterator left, Iterator right)
 {
 	Iterator i=left, j=right;
 	Iterator x = left;
