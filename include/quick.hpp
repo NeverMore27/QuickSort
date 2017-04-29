@@ -5,20 +5,23 @@
 template <class Iterator>
 void quickSort(Iterator begin, Iterator end)
 {
-	Iterator left=begin, right=end;
-	Iterator f = begin+distance(begin, end) / 2;
-	do
+	Iterator i=left, j=right;
+	Iterator x = left;
+	while (i <= j)
 	{
-		while (*left < *f) left++;
-		while (*right> *f) right--;
-		if (left <= right)
+		while (*i < *x) i++;
+		while (*j > *x) j--;
+		if (i <= j)
 		{
-			swap(left, right);
-			left++;
-			right--;
+			std::iter_swap(j, i);
+			i++;
+			j--;
 		}
-		} while (left <= right);
-		if (left < 0) quickSort(right, end);
-		if (end > left) quickSort(begin, left);
+	}
+	if (i<right)
+		quickSort(i, right);
+
+	if (left<j)
+		quickSort(left, j); quickSort(begin, left);
 	
 }
