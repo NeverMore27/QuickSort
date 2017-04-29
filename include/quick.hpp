@@ -1,3 +1,7 @@
+#include <iostream> 
+#include <algorithm>
+#include <iterator>
+
 template <class Iterator>
 void quickSort(Iterator begin, Iterator end)
 {
