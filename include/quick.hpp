@@ -22,6 +22,5 @@ void quickSort(Iterator left, Iterator right)
 		quickSort(i, right);
 
 	if (left<j)
-		quickSort(left, j); quickSort(begin, left);
-	
+		quickSort(left, j);
 }
