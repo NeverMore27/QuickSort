@@ -1,7 +1,7 @@
 template <class Iterator>
 void quickSort(Iterator begin, Iterator end)
 {
-	Iterator left=begin, right=end, pivot = begin;
+	Iterator left=begin, right=end;
 	Iterator f = begin+distance(begin, end) / 2;
 	do
 	{
