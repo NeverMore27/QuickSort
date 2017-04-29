@@ -9,8 +9,8 @@ void quickSort(Iterator begin, Iterator end)
 	Iterator x = left;
 	while (i <= j)
 	{
-		while (*i < *x) i++;
-		while (*j > *x) j--;
+		while (*i > *x) i++;
+		while (*j < *x) j--;
 		if (i <= j)
 		{
 			std::iter_swap(j, i);
